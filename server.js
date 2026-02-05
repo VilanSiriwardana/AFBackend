@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 
 // Import Routes
 const userRoutes = require("./routes/userRoutes");
+const countryRoutes = require("./routes/countryRoutes");
 
 // Load environment variables
 dotenv.config();
@@ -27,6 +28,7 @@ mongoose
 
 // Use routes
 app.use("/api/v1", userRoutes);
+app.use("/api/v1", countryRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
